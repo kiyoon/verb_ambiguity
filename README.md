@@ -21,8 +21,8 @@ conda install pytorch==1.12.1 torchvision cudatoolkit=10.2 -c pytorch
 #conda install pytorch==1.12.1 torchvision cudatoolkit=11.3 -c pytorch
  
 
-git clone --recurse-submodules https://github.com/kiyoon/channel_sampling
-cd channel_sampling
+git clone --recurse-submodules https://github.com/kiyoon/verb_ambiguity
+cd verb_ambiguity
 git submodule update --recursive
 cd submodules/video_datasets_api
 pip install -e .
