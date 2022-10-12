@@ -11,6 +11,38 @@ In BMVC 2022. [`arXiv`](https://arxiv.org/abs/2210.04933)
 - [EPIC-Kitchens-100-SPMV test set labels](https://github.com/kiyoon/verb_ambiguity/releases/download/datasets-v1.0.0/ek100-val-multiple-verbs-halfagree-halfconfident-include_original-20220427.csv)
 - [Confusing-HMDB-102 labels](https://github.com/kiyoon/verb_ambiguity/releases/download/datasets-v1.0.0/confusing_hmdb_102_splits.tar.gz)
 
+## Installation
+
+```bash
+conda create -n videoai python=3.9
+conda activate videoai
+conda install pytorch==1.12.1 torchvision cudatoolkit=10.2 -c pytorch
+### For RTX 30xx GPUs,
+#conda install pytorch==1.12.1 torchvision cudatoolkit=11.3 -c pytorch
+ 
+
+git clone --recurse-submodules https://github.com/kiyoon/channel_sampling
+cd channel_sampling
+git submodule update --recursive
+cd submodules/video_datasets_api
+pip install -e .
+cd ../experiment_utils
+pip install -e .
+cd ../..
+pip install -e .
+```
+
+Optional: Pillow-SIMD and libjepg-turbo to improve dataloading performance.  
+Run this at the end of the installation:  
+
+```bash
+conda uninstall -y --force pillow pil jpeg libtiff libjpeg-turbo
+pip   uninstall -y         pillow pil jpeg libtiff libjpeg-turbo
+conda install -yc conda-forge libjpeg-turbo
+CFLAGS="${CFLAGS} -mavx2" pip install --upgrade --no-cache-dir --force-reinstall --no-binary :all: --compile pillow-simd
+conda install -y jpeg libtiff
+```
+
 ## Running feature experiments using pre-extracted features
 1. Download pre-extracted features.
 - [Download EPIC-Kitchens-100 TSM features](https://github.com/kiyoon/verb_ambiguity/releases/download/datasets-v1.0.0/EPIC_KITCHENS_100_TSM_features.tar.gz)
@@ -180,3 +212,8 @@ If you find our work or code useful, please cite:
   booktitle={British Machine Vision Conference (BMVC)},
   year={2022}
 }
+
+
+## Framework Used
+This repository is a fork of [PyVideoAI framework](https://github.com/kiyoon/PyVideoAI).  
+Learn how to use it with [PyVideoAI-examples notebooks](https://github.com/kiyoon/PyVideoAI-examples).
