@@ -1,0 +1,8 @@
+[submodule "submodules/video_datasets_api"]
+	path = submodules/video_datasets_api
+	url = https://github.com/kiyoon/video_datasets_api
+	branch = master
+[submodule "submodules/experiment_utils"]
+	path = submodules/experiment_utils
+	url = https://github.com/kiyoon/experiment_utils
+	branch = master
