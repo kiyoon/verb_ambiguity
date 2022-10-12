@@ -212,7 +212,7 @@ If you find our work or code useful, please cite:
   booktitle={British Machine Vision Conference (BMVC)},
   year={2022}
 }
-
+```
 
 ## Framework Used
 This repository is a fork of [PyVideoAI framework](https://github.com/kiyoon/PyVideoAI).  
