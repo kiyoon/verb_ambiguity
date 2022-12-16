@@ -207,10 +207,12 @@ If you find our work or code useful, please cite:
 
 ```BibTeX
 @inproceedings{kim2022ambiguity,
-  title={An Action Is Worth Multiple Words: Handling Ambiguity in Action Recognition},
-  author={Kim, Kiyoon and Moltisanti, Davide and Mac Aodha, Oisin and Sevilla-Lara, Laura},
-  booktitle={British Machine Vision Conference (BMVC)},
-  year={2022}
+  author    = {Kiyoon Kim and Davide Moltisanti and Oisin Mac Aodha and Laura Sevilla-Lara},
+  title     = {An Action Is Worth Multiple Words: Handling Ambiguity in Action Recognition},
+  booktitle = {33rd British Machine Vision Conference 2022, {BMVC} 2022, London, UK, November 21-24, 2022},
+  publisher = {{BMVA} Press},
+  year      = {2022},
+  url       = {https://bmvc2022.mpi-inf.mpg.de/0356.pdf}
 }
 ```
 
